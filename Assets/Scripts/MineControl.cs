@@ -1,13 +1,13 @@
 using UnityEngine;
 
 public class MineControl : MonoBehaviour
-{   
-    public GameObject explosionPrefab;
+{
+    [SerializeField] private GameObject explosionPrefab;
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Mine says: I'm still colliding with the ground" + other.name);
-        if (other.GetComponent<CarControl>() != null)
-        {
+        if (other.CompareTag("Player"))
+            {
             Debug.Log("Mine says: YOU'RE DEAD " + other.name);
             Explode();
         }
