@@ -10,12 +10,7 @@ public class ChangeCamera : MonoBehaviour
 
     private int activePriority = 10;
     private int inactivePriority = 0;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
